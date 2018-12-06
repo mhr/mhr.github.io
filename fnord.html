@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Fnord</title>
+	</head>
+	<body id="flicker">
+		<h1>Fnord</h1>
+
+		<p class="text">"Very nice," I said. "But why did you bring me up here?"</p>
+
+		<p class="text">"It's time for you to see the fnords," he replied.<p>
+
+		<p class="text">Then I woke up in bed and it was the next morning. I made breakfast in a pretty nasty mood, wondering if I'd seen the fnords, whatever the hell they were, in the hours I had blacked out, or if I would see them as soon as I went out into the street. I had some pretty gruesome ideas about them, I must admit. Creatures with three eyes and tentacles, survivors from Atlantis, who walked among us, invisible due to some form of mind shield, and did hideous work for the Illuminati. It was unnerving to contemplate, and I finally gave in to my fears and peeked out the window, thinking it might be better to see them from a distance first. Nothing. Just ordinary sleepy people, heading for their busses and subways. That calmed me a little, so I set out the toast and coffee and fetched the New York Times from the hallway. I turned the radio to WBAI and caught some good Vivaldi, sat down, grabbed a piece of toast and started skimming the first page.</p>
+
+		<p class="text">Then I saw the <em>fnords.</em></p>
+
+		<p class="text">The feature story involved another of the endless squabbles between Russia and the U.S. in the UN General Assembly, and after each direct quote from the Russian delegate I read a quite distinct <em>"Fnord!"</em> The second lead was about a debate in congress on getting the troops out of costa Rica; every argument presented by Senator Bacon was followed by another <em>"Fnord!"</em> At the bottom of the page was a Times depth-type study of the growing pollution problem and the increasing use of gas masks among New Yorkers; the most distressing chemical facts were interpolated with more <em>"Fnords."</em></p>
+
+		<p class="text">Suddenly I saw Hagbard's eyes burning into me and heard his voice: "Your heart will remain calm. Your adrenaline gland will remain calm. Calm, all-over calm. You will not panic. You will look at the fnord and see the it. You will not evade it or black it out. You will stay calm and face it." And further back, way back: my first-grade teacher writing <b>FNORD</b> on the blackboard, while a wheel with a spiral design turned and turned on his desk, turned and turned, and his voice droned on,
+
+		<h4><blockquote><p>"IF YOU DON'T SEE THE FNORD IT CAN'T EAT YOU, DON'T SEE THE FNORD, DON'T SEE THE FNORD . . ."</p></blockquote></h4>
+
+		<p class="text">I looked back at the paper and still saw the <em>fnords</em>. This was one step beyond Pavlov, I realized. The first conditioned reflex was to experience the panic reaction (the activation syndrome, it's technically called) whenever encountering the word <em>"fnord."</em> The second conditioned reflex was to black out what happened, including the word itself, and just to feel a general low-grade emergency without knowing why. And the third step, of course, was to attribute this anxiety to the news stories, which were bad enough in themselves anyway. Of course, the essence of control is fear. The <em>fnords</em> produced a whole population walking around in chronic low-grade emergency, tormented by ulcers, dizzy spells, nightmares, heart palpitations and all the other symptoms of too much adrenalin. All my left-wing arrogance and contempt for my countrymen melted, and I felt a genuine pity. No wonder the poor bastards believe anything they're told, walk through pollution and overcrowding without complaining, watch their son hauled off to endless wars and butchered, never protest, never fight back, never show much happiness or eroticism or curiosity or normal human emotion, live with perpetual tunnel vision, walk past a slum without seeing either the human misery it contains or the potential threat it poses to their security . . .</p>
+
+		<p class="text">Then I got a hunch, and turned quickly to the advertisements. it was as I expected: no <em>fnords</em>. That was part of the gimmick, too: only in consumption, endless consumption, could they escape the amorphous threat of the invisible <em>fnords</em>. I kept thinking about it on my way to the office. If I pointed out a <em>fnord</em> to somebody who hadn't been deconditioned, as Hagbard deconditioned me, what would he or she say? They'd probably read the word before or after it. "No this word," I'd say. And they would again read an adjacent word. But would their panic level rise as the threat came closer to consciousness? I preferred not to try the experiment; it might have ended with a psychotic fugue in the subject. The conditioning, after all, went back to grade school. No wonder we all hate those teachers so much: we have a dim, masked memory of what they've done to us in converting us into good and faithful servants for the Illuminati.</p>
+		
+		<h3 id="toggle">Toggle Illuminati Mode</h3>
+	</body>
+	<script>
+	    function flashtext(color) {
+			var tmpColCheck = document.getElementById("flicker").style.backgroundColor;
+
+			if (tmpColCheck === "white") {
+				document.getElementById("flicker").style.backgroundColor = "red";
+			} else {
+				document.getElementById("flicker").style.backgroundColor = "white";
+			}
+		}
+
+		var flicker;
+		function change() {
+			if (!flicker) {
+				flicker = window.setInterval(function() {
+					flashtext();
+				}, 50);
+			} else {
+				window.clearInterval(flicker);
+				document.getElementById("flicker").style.backgroundColor = "white";
+				flicker = null;
+			}
+		}
+		
+		var button = document.getElementById("toggle");
+		button.onclick = function() {
+			var text = document.getElementsByClassName("text");
+			for (var el of text) {
+				el.classList.toggle("shake");
+			}
+			change();
+		}
+	</script>
+	<link rel="stylesheet" type="text/css" href="splendor.css">
+	<style>
+		@keyframes wiggle {
+			0% {transform: rotateZ(2deg);}
+			50% {transform: rotateZ(-2deg);}
+			100% {transform: rotateZ(2deg);}
+		}
+		@keyframes shake {
+			10%, 90% {
+				transform: translate3d(-1px, 0, 0);
+			}
+
+			20%, 80% {
+				transform: translate3d(2px, 0, 0);
+			}
+
+			30%, 50%, 70% {
+				transform: translate3d(-4px, 0, 0);
+			}
+
+			40%, 60% {
+				transform: translate3d(4px, 0, 0);
+			} 
+		}
+		.shake {
+			// animation: wiggle 0.5s ease infinite;
+			animation: shake 0.5s ease infinite;
+		}
+		#toggle {
+			background-color: green;
+			color: white;
+			padding: 2rem 0;
+			text-align: center;
+			cursor: pointer;
+		}
+		#toggle:active,
+		#toggle:focus,
+		#toggle:hover {
+			background-color: pink;
+			color: black
+		}
+	</style>
+</html>
